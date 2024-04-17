@@ -1,15 +1,22 @@
--- This is an example SQLX file to help you learn the basics of Dataform.
--- Visit https://cloud.google.com/dataform/docs/sql-workflows for more information on how to configure your SQL workflow.
-
--- You can delete this file, then commit and push your changes to your repository when you are ready.
-
--- Config blocks allow you to configure, document, and test your data assets.
 config {
   type: "table",
-  description: "Description of the first table.",
+  name: "source"
+  ,description: "Description of the table"
+  ,tags: ["favourite", "least_liked"],
 }
-SELECT 1 AS number
+
+SELECT
+  "apples" AS fruit,
+  3 AS count
 UNION ALL
-SELECT 5 AS number
-UNION ALL 
-SELECT 3 AS number
+SELECT
+  "oranges" AS fruit,
+  5 AS count
+UNION ALL
+SELECT
+  "pears" AS fruit,
+  1 AS count
+UNION ALL
+SELECT
+  "bananas" AS fruit,
+  0 AS count
