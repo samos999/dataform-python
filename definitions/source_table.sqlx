@@ -5,12 +5,11 @@
 
 -- Config blocks allow you to configure, document, and test your data assets.
 config {
-  type: "view", // Creates a view in BigQuery. Try changing to "table" instead.
-  columns: {
-    test: "A description for the test column", // Column descriptions are pushed to BigQuery.
-  }
+  type: "table",
+  description: "Description of the first table.",
 }
-
--- The rest of a SQLX file contains your SELECT statement used to create the table.
-
-SELECT 1 as test
+SELECT 1 AS number
+UNION ALL
+SELECT 5 AS number
+UNION ALL 
+SELECT 3 AS number
