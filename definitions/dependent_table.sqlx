@@ -4,4 +4,4 @@ config {
   dependencies: ["dataform_source_assertions_rowConditions",
     "dataform_source_assertions_uniqueKey_0"]
 }
-SELECT * FROM ${ref("source")} WHERE fruit = 'apple'
+SELECT * FROM ${ref("source")} WHERE fruit = 'apples'
